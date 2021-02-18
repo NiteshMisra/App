@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ListingFragment">
+
+    <TextView
+        android:id="@+id/addUser_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_person_add"
+        android:drawablePadding="15dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:text="Add User"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/addUser_tv"
+        android:background="#F0F0F0"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/usersRcv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/element_user"
+        android:layout_below="@id/view1"
+        android:overScrollMode="never"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/emptyLayout_ll"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_vertical"
+            android:text="No User Exist."
+            android:textColor="#000000"
+            android:layout_margin="10dp"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addUserBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add User"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="14sp"
+            android:textColor="@color/colorWhite"
+            style="@style/Widget.MaterialComponents.Button"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
